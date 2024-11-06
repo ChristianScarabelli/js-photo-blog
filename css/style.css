@@ -1,0 +1,61 @@
+/* RESET RULES  */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Vibur", cursive;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* LAYOUT */
+
+.container-fluid {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* MEDIA QUERIES  */
+
+/* versione tabled */
+@media (max-width: 991.99px) {}
+
+/* versione mobile */
+@media (max-width: 767.99px) {}
