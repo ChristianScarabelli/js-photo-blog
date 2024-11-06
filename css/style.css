@@ -52,6 +52,32 @@ img {
     padding-right: 1rem;
 }
 
+/* HEADER  */
+
+header {
+    height: 150px;
+    background-image: url('../img/wall.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_title {
+    font-size: 70px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+/* BODY  */
+
+body {
+    background-image: url('../img/cork.png');
+}
+
+
+
+
+
 /* MEDIA QUERIES  */
 
 /* versione tabled */
