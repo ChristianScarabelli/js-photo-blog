@@ -17,7 +17,7 @@ axios
     })
     .then((res) => {
         const photos = res.data  // variabile con i dati della chiamata
-
+        console.log(photos)
         appendPhotos(photos, photosContainer)
     })
     .catch((err) => {
