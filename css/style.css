@@ -42,6 +42,7 @@ img {
 .row {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 2em;
 }
 
 .col-4 {
@@ -74,6 +75,7 @@ header {
 
 body {
     background-image: url('../img/cork.png');
+    padding-bottom: 50px;
 }
 
 /* CARD  */
