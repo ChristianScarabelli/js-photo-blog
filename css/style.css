@@ -8,6 +8,7 @@
 
 html {
     font-family: "Vibur", cursive;
+    font-size: 1.2em;
 }
 
 a {
@@ -43,8 +44,8 @@ img {
     flex-wrap: wrap;
 }
 
-.col-12 {
-    width: 100%;
+.col-4 {
+    width: calc(100% / 3);
 }
 
 .col {
@@ -60,6 +61,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .header_title {
@@ -73,6 +75,42 @@ header {
 body {
     background-image: url('../img/cork.png');
 }
+
+/* CARD  */
+
+.photo_card_main {
+    padding: 1em;
+    background-color: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo_card_main p {
+    padding: 16px 0px 16px 0px;
+    margin-top: auto;
+}
+
+.photo_pin {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*
+immagini grandezza 260px 
+*/
+#photo_img {
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+
 
 
 
