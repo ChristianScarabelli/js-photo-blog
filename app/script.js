@@ -75,6 +75,7 @@ const addCardClickEventListeners = () => {
         card.addEventListener('click', () => {
             overlayEl.classList.remove('display_none')
             document.body.style.overflow = 'hidden'
+            // window.scrollTo(0, 0) // Scorre la pagina in cima quando si clicca
             // Dom
             const imgElement = card.querySelector('.photo_img'); // img generata nella card
             const url = imgElement.src // valore src dell'immagine generata
