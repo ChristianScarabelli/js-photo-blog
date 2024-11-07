@@ -67,9 +67,6 @@ overlayEl.addEventListener('click', (event) => {
     }
 })
 
-
-// Dom
-const overlayImgEl = document.getElementById('overlay_img')
 // Funzione per aggiungere evento click a tutte le card
 const addCardClickEventListeners = () => {
     const mainPhotoCardEls = document.querySelectorAll('.photo_card_main')
@@ -78,8 +75,18 @@ const addCardClickEventListeners = () => {
         card.addEventListener('click', () => {
             overlayEl.classList.remove('display_none')
             document.body.style.overflow = 'hidden'
+            // Dom
+            const imgElement = card.querySelector('.photo_img'); // img generata nella card
+            const url = imgElement.src // valore src dell'immagine generata
+            showOverlayImageUrl(url) // passo l'URL dell'img generata alla funzione per mostrare l'immagine nell'overlay
         })
     })
 }
 
-// overlayImgEl.innerHTML = ` src=${url.src} `
+// Funzione per assegnare l'URL della card selezioanta al suo click
+// Dom
+const overlayImgEl = document.getElementById('overlay_img')
+
+const showOverlayImageUrl = (url) => {
+    overlayImgEl.src = url
+}
