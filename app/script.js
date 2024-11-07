@@ -55,8 +55,19 @@ const overlayEl = document.getElementById('overlay')
 // Evento al click bottone per chiudere l'overlay
 closePhotoButtonEl.addEventListener('click', () => {
     overlayEl.classList.add('display_none')
+    document.body.style.overflow = 'auto'
 })
 
+
+// Evento al click dell'overlay per chiuderlo anche non cliccando sul tasto
+overlayEl.addEventListener('click', (event) => {
+    overlayEl.classList.add('display_none')
+    document.body.style.overflow = 'auto'
+})
+
+
+// Dom
+const overlayImgEl = document.getElementById('overlay_img')
 // Funzione per aggiungere evento click a tutte le card
 const addCardClickEventListeners = () => {
     const mainPhotoCardEls = document.querySelectorAll('.photo_card_main')
@@ -65,11 +76,7 @@ const addCardClickEventListeners = () => {
         card.addEventListener('click', () => {
             overlayEl.classList.remove('display_none')
             document.body.style.overflow = 'hidden'
+            // overlayImgEl.innerHTML = ` src=${url.src} `
         })
     })
 }
-
-// Evento al click dell'overlay per chiuderlo anche non cliccando sul tasto
-overlayEl.addEventListener('click', (event) => {
-    overlayEl.classList.add('display_none')
-})
