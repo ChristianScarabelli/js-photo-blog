@@ -140,7 +140,7 @@ header {
 .photo_card_main:hover {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
     -webkit-transform: scale(1.2) rotate(10deg);
-    z-index: 999;
+    z-index: 998;
 
     .photo_pin {
         display: none;
