@@ -61,8 +61,10 @@ closePhotoButtonEl.addEventListener('click', () => {
 
 // Evento al click dell'overlay per chiuderlo anche non cliccando sul tasto
 overlayEl.addEventListener('click', (event) => {
-    overlayEl.classList.add('display_none')
-    document.body.style.overflow = 'auto'
+    if (event.target === overlayEl) {  // target è l'obiettivo dell'evento, così da escludere altre zone di click
+        overlayEl.classList.add('display_none')
+        document.body.style.overflow = 'auto'
+    }
 })
 
 
@@ -76,7 +78,8 @@ const addCardClickEventListeners = () => {
         card.addEventListener('click', () => {
             overlayEl.classList.remove('display_none')
             document.body.style.overflow = 'hidden'
-            // overlayImgEl.innerHTML = ` src=${url.src} `
         })
     })
 }
+
+// overlayImgEl.innerHTML = ` src=${url.src} `
