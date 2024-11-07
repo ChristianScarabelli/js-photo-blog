@@ -57,7 +57,7 @@ img {
 
 /* OVERLAY  */
 
-#overlay {
+.overlay {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,10 +66,11 @@ img {
     z-index: 999;
     position: absolute;
     width: 100vw;
-    /* 100% della viewport */
-    /* 100% del contenitore, body, che è a tutta pagina, 
-    compresa parte con scoll */
     height: 100%;
+}
+
+.display_none {
+    display: none;
 }
 
 #close_photo_btn {
@@ -82,12 +83,17 @@ img {
     font-size: 12px;
     line-height: 24px;
     padding: 5px 20px;
+    cursor: pointer;
 }
 
 #overlay_img {
     max-height: 600px;
     aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
 }
+
+
 
 /* BODY  */
 
