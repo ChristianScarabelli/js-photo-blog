@@ -55,6 +55,43 @@ img {
     padding-right: 1em;
 }
 
+/* OVERLAY  */
+
+#overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    position: absolute;
+    width: 100vw;
+    /* 100% della viewport */
+    /* 100% del contenitore, body, che è a tutta pagina, 
+    compresa parte con scoll */
+    height: 100%;
+}
+
+#close_photo_btn {
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Vibur", cursive;
+    border: 1px solid;
+    border-radius: 999px;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 5px 20px;
+}
+
+/* BODY  */
+
+body {
+    background-image: url('../img/cork.png');
+    padding-bottom: 50px;
+    position: relative;
+}
+
 /* HEADER  */
 
 header {
@@ -72,13 +109,6 @@ header {
     font-weight: bolder;
 }
 
-/* BODY  */
-
-body {
-    background-image: url('../img/cork.png');
-    padding-bottom: 50px;
-}
-
 /* CARD  */
 
 .photo_card_main {
@@ -89,6 +119,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    cursor: pointer;
     /* height: 360px;
     width: 295px; 
     margin: 0 auto; */
