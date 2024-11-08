@@ -55,6 +55,7 @@ const overlayEl = document.getElementById('overlay')
 // Evento al click bottone per chiudere l'overlay
 closePhotoButtonEl.addEventListener('click', () => {
     overlayEl.classList.add('display_none')
+    // overlayEl.style.display = 'none' approccio con stile in linea
     document.body.style.overflow = 'auto'
 })
 
@@ -79,6 +80,8 @@ const addCardClickEventListeners = () => {
             // Dom
             const imgElement = card.querySelector('.photo_img'); // img generata nella card
             const url = imgElement.src // valore src dell'immagine generata
+            // altro modo // const {url} = photos[i] 
+            // overlayImgEl.src = url
             showOverlayImageUrl(url) // passo l'URL dell'img generata alla funzione per mostrare l'immagine nell'overlay
         })
     })
