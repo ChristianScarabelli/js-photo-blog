@@ -17,6 +17,7 @@ axios
         },
     })
     .then((res) => {
+        console.log(res)
         const photos = res.data // Variabile con i dati della chiamata
         createAppendPhotoCard(photos) // chiamo la funzione appena arrivati i dati
     })
@@ -30,6 +31,7 @@ const createAppendPhotoCard = (photos) => {
 
     photos.forEach((photo) => {
         const { url, title } = photo
+
         const photoCardCol = document.createElement('div')
         photoCardCol.classList.add('col', 'col-4')
         photoCardCol.innerHTML = `
@@ -63,24 +65,19 @@ const createAppendPhotoCard = (photos) => {
             overlayImg.src = url
         })
     })
-
-    // Chiudo l'overlay quando si clicca sull'overlay stesso ma non sull'immagine
-    overlayEl.addEventListener('click', (event) => {
-        if (event.target === overlayEl) {
-            overlayEl.classList.add('display_none')
-            document.body.style.overflow = 'auto'
-        }
-    })
 }
+
+// OVERLAY
+// Chiudo l'overlay quando si clicca sull'overlay stesso ma non sull'immagine
+overlayEl.addEventListener('click', (event) => {
+    if (event.target === overlayEl) {
+        overlayEl.classList.add('display_none')
+        document.body.style.overflow = 'auto'
+    }
+})
 
 // Chiudo l'overlay quando si clicca sul bottone chiudi
 closePhotoButtonEl.addEventListener('click', () => {
     overlayEl.classList.add('display_none')
     document.body.style.overflow = 'auto'
 })
-
-
-
-
-
-
